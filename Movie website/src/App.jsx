@@ -4,6 +4,7 @@ import MovieCard from './components/MovieCard';
 import Home from './pages/Home';
 import { Routes, Route } from "react-router-dom";
 import NavBar from './components/NavBar';
+import { MovieProvider } from './contexts/MovieContext';
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
 
   return (
     //<Home />
-    <div>
+    <MovieProvider>
 
       <NavBar />
 
@@ -21,7 +22,7 @@ function App() {
           <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </main>
-    </div>
+    </MovieProvider>
   );
 }
 
